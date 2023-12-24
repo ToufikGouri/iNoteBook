@@ -1,0 +1,21 @@
+const mongoose = require('mongoose');
+
+const mongoURI = "mongodb://localhost:27017"
+
+const connectToMongo = async () => {
+    try {
+        if (mongoose.connection.readyState != 1) {
+            await mongoose.connect(mongoURI)
+            console.log("Connected to mongo successfully");
+        }
+    } catch (error) {
+        console.log("The error is", error);
+    }
+}
+// const connectToMongo = () => {
+//     mongoose.connect(mongoURI, () => {
+//         console.log("Connected to mongo successfully");
+//     })
+// }
+
+module.exports = connectToMongo;
