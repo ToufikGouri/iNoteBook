@@ -49,7 +49,7 @@ router.post('/createuser', [
         res.status(500).send("Internal server Error");
     }
 })
-
+ 
 // ROUTE 2:  Authenticate a User using: POST "/api/auth/login". No login required
 router.post('/login', [
     body('email', 'Enter a valid email').isEmail(),
