@@ -3,6 +3,7 @@ import noteContext from '../context/notes/noteContext'
 import NoteItem from './NoteItem'
 import AddNote from './AddNote'
 import { useNavigate } from 'react-router-dom'
+import '../css/notes.css'
 
 const Notes = (props) => {
     const context = useContext(noteContext);
@@ -13,7 +14,7 @@ const Notes = (props) => {
             getNotes()
         }
         else {
-            navigate('/login');
+            // navigate('/login');
         }
     }, [])
 
@@ -75,8 +76,8 @@ const Notes = (props) => {
                     </div>
                 </div>
             </div>
-            <div className="row my-3">
-                <h2>Your notes</h2>
+            <h2 className='text-center'><span className='border-bottom'>Your Notes</span></h2>
+            <div className="row my-3 text-white notes-container">
                 <div className="container mx-1">
                     {notes.length === 0 && "No notes to display"}
                 </div>

@@ -1,10 +1,14 @@
-import React, { useContext } from 'react' 
+import React, { useContext } from 'react'
+import Footer from './Footer'
 
 const About = () => {
   return (
-    <div>
-      This is about page
-    </div>
+    <>
+      <div className='text-white'>
+        This is about page
+      </div>
+      <Footer/>
+    </>
   )
 }
 

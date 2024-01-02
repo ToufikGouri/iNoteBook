@@ -1,0 +1,10 @@
+.notes-container {
+    /* border: 2px solid red; */
+}
+
+.fa-trash-can:hover {
+    color: red;
+}
+.fa-pen-to-square:hover {
+    color: green;
+}

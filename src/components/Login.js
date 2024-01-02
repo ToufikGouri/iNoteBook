@@ -15,7 +15,6 @@ const Login = (props) => {
             body: JSON.stringify({ email: credentials.email, password: credentials.password }),
         });
         const json = await response.json()
-        console.log(json);
         if (json.success) {
             // Save the auth token and redirect
             localStorage.setItem('token', json.authtoken);
@@ -32,8 +31,8 @@ const Login = (props) => {
 
     return (
         <>
-            <h2 className='mt-3'>Login to continue to iNoteBook</h2>
-            <form onSubmit={handleSubmit}>
+            <h2 className='mt-3 text-white'>Login to continue to iNoteBook</h2>
+            <form className='text-white' onSubmit={handleSubmit}>
                 <div className="mb-3">
                     <label htmlFor="email" className="form-label">Email address</label>
                     <input type="email" className="form-control" value={credentials.email} onChange={onChange} id="email" name='email' aria-describedby="emailHelp" />
