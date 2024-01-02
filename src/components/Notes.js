@@ -14,7 +14,7 @@ const Notes = (props) => {
             getNotes()
         }
         else {
-            navigate('/login');
+            // navigate('/login');
         }
     }, [])
 

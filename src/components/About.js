@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import Footer from './Footer'
 
 const About = () => {
   return (
@@ -6,6 +7,7 @@ const About = () => {
       <div className='text-white'>
         This is about page
       </div>
+      <Footer/>
     </>
   )
 }

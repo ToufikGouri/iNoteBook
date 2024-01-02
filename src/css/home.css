@@ -1,10 +1,61 @@
-.addNote{
+.addNote {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.addNote form{
-    /* border: 2px solid red; */
+
+.addNote form {
     width: 50%;
+}
+
+/* Log Out page CSS (lo) */
+
+.lo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.lo-headings {
+    font-size: 56px;
+    font-weight: 700;
+}
+
+.lo-heroSection {
+    width: 50%;
+    text-align: center;
+}
+
+.lo-heroSection p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6em;
+    margin: 20px 0;
+}
+
+.img-container {
+    height: 300px;
+    width: 300px;
+}
+
+.img-container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.lo-imgParent{
+    width: 950px;
+    margin: 50px 0;
+}
+
+#lo-animatingText{
+    /* color: red; */
+}
+
+footer {
+    /* width: 100%; */
 }
