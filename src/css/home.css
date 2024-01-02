@@ -1,0 +1,10 @@
+.addNote{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.addNote form{
+    /* border: 2px solid red; */
+    width: 50%;
+}
