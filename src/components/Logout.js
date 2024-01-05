@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { animated, useSpring } from 'react-spring'
+import {useNavigate} from 'react-router-dom'
+import { animated, useInView, useSpring } from 'react-spring';
+import Footer from './Footer'
 
 const Logout = () => {
+
+    const navigate = useNavigate()
 
     // Animation logic
     let allTexts = ["Plan", "Mood", "Feelings", "Goals", "Thoughts", "Vision", "Ideas", "Targets"]
@@ -18,6 +22,7 @@ const Logout = () => {
         return () => clearInterval(setInt)
     }, [allTexts, currentText])
 
+
     // React-useSpring effect WORD Effect
     const animSpring = useSpring({
         from: { opacity: 0, transform: 'rotateX(45deg) translateY(100%)' },
@@ -26,12 +31,16 @@ const Logout = () => {
     });
 
     // React-useSpring effect COUNTER Effect
+    const [ref, isVisible] = useInView()
+
     const { count } = useSpring({
         from: { count: 0, opacity: 0 },
-        to: { count: 150000, opacity: 1 }
+        to: { count: isVisible ? 150000 : 0, opacity: isVisible ? 1 : 0 },
     })
-    // interpolate property is used here and it's working but find a way to do without using interpolate
-    // becuase it's depricated now
+
+    // The counter should be Start each time whenever the user see it so we 
+    // will use the useInView hook of React-Spring
+
 
     return (
         <>
@@ -42,7 +51,7 @@ const Logout = () => {
                 <div className="lo-heroSection my-3">
                     <h1 className='lo-headings'>The Simplest Way To Keep Notes</h1>
                     <p>Simplifying Your Thoughts - Organize, Create, and Access Your Ideas Effortlessly, All Your Notes At One Place.</p>
-                    <button className="btn btn-primary">Create Your Free Account</button>
+                    <button onClick={() => { navigate("/signup") }} className="btn btn-outline-light">Create Your Free Account</button>
                 </div>
 
                 {/* ***************************Hero Animation****************************** */}
@@ -97,16 +106,38 @@ const Logout = () => {
                 <div className="lo-end my-5">
                     <h1 className="lo-headings text-center mb-4">What people are saying</h1>
                     <div className="row">
-                        <p className="col-md-4">If you're not using iNoteBook, you're missing out.<div>TechCrunch</div></p>
-                        <p className="col-md-4">If you're looking for a cross-platform note-taking tool with just enough frills, it's hard to look beyond iNoteBook.<div>MacWorld</div></p>
-                        <p className="col-md-4">If you want a truly distraction-free environment then you can't do better than iNoteBook for your note-taking needs.<div>Zapier</div></p>
+                        <div className="col-md-4 lo-end-text">If you're not using iNoteBook, you're missing out.<p>TechCrunch</p></div>
+                        <div className="col-md-4 lo-end-text">If you're looking for a cross-platform note-taking tool with just enough frills, it's hard to look beyond iNoteBook.<p>MacWorld</p></div>
+                        <div className="col-md-4 lo-end-text">If you want a truly distraction-free environment then you can't do better than iNoteBook for your note-taking needs.<p>Zapier</p></div>
                     </div>
 
                     {/* Counter animation */}
-                    <div className="counter my-5">
-                        <h1 className="lo-headings text-center">Join The Family Of <animated.div className="d-inline-block">{count.interpolate((val) => Math.floor(val))}</animated.div> Users On iNoteBook</h1>
+                    <div className="counter py-5 my-5">
+                        <h1 className="lo-headings text-center">Join The Family Of <animated.div ref={ref} className="lo-animatingCounter">{isVisible && count.to((val) => `${Math.floor(val)}+`)}</animated.div>Users On iNoteBook</h1>
+                    </div>
+
+                    <div className="lo-downloads border-top py-5">
+                        <h1 className="lo-headings text-center">Available On All Your Devices</h1>
+                        <div className="lo-downloadsContent text-center">
+                            <p>Download iNoteBook For Any Device And Stay In Sync - All The Time,<br /> Everywhere.</p>
+                            <div>
+                                <div>
+                                    <button className="btn btn-outline-light text- m-3"><div className='d-flex align-items-center text-start'><i className="fa-brands fa-apple fa-2xl me-4"></i><div> Downloads On The <div className='fs-5 fw-bold'>App Store</div></div></div></button>
+                                    <button className="btn btn-outline-light text-light m-3"><div className='d-flex align-items-center text-start'><i className="fa-brands fa-apple fa-2xl me-4"></i><div> Downloads On The <div className='fs-5 fw-bold'>Mac App Store</div></div></div></button>
+                                </div>
+                                <div>
+                                    <button className="btn btn-outline-light text-light m-3"><div className='d-flex align-items-center text-start'><i className="fa-brands fa-google-play fa-2xl me-3"></i><div> Downloads On The <div className='fs-5 fw-bold'>Play Store</div></div></div></button>
+                                    <button className="btn btn-outline-light text-light m-3"><div className='d-flex align-items-center text-start'><i className="fa-brands fa-windows fa-2xl me-3"></i><div> Downloads On The <div className='fs-5 fw-bold'>Windows Store</div></div></div></button>
+                                </div>
+                                <div>
+                                    <button className="btn btn-outline-light text-light m-3"><div className='d-flex align-items-center text-start'><i className="fa-brands fa-linux fa-2xl me-4"></i><div> Downloads For <div className='fs-5 fw-bold'>Linux</div></div></div></button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+                <Footer />
 
             </div>
         </>

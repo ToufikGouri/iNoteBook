@@ -35,6 +35,12 @@
     margin: 20px 0;
 }
 
+.lo-heroSection button {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6em;
+}
+
 .img-container {
     height: 300px;
     width: 300px;
@@ -62,7 +68,7 @@
     width: 70%;
 }
 
-.lo-end p {
+.lo-end-text {
     font-size: 18px;
     font-weight: 400;
     line-height: 1.6em;
@@ -70,12 +76,39 @@
     border-left: 4px solid #3a3c3e;
 }
 
-.lo-end p div {
+.lo-end-text p {
     color: #3a3c3e;
     font-weight: 700;
     font-style: italic;
 }
 
-footer {
-    /* width: 100%; */
+.lo-animatingCounter {
+    display: inline-block;
+    color: #00ae00;
+}
+
+.lo-downloadsContent {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6em;
+    margin: 20px 0;
+}
+
+.lo-downloads button :hover {
+    color: #1D1E22;
+    transition: ease-in-out;
+}
+
+footer ul li {
+    padding: 0 30px;
+    list-style: none;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer ul li :hover {
+    color: #3a3c3e;
 }
