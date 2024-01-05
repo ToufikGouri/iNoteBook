@@ -40,20 +40,40 @@
     width: 300px;
 }
 
-.img-container img{
+.img-container img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     border-radius: 15px;
 }
 
-.lo-imgParent{
+.lo-imgParent {
     width: 950px;
     margin: 50px 0;
 }
 
-#lo-animatingText{
-    /* color: red; */
+#lo-animatingText {
+    display: inline-block;
+    margin: 0 15px;
+    color: #00ae00;
+}
+
+.lo-end {
+    width: 70%;
+}
+
+.lo-end p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6em;
+    margin: 20px 0;
+    border-left: 4px solid #3a3c3e;
+}
+
+.lo-end p div {
+    color: #3a3c3e;
+    font-weight: 700;
+    font-style: italic;
 }
 
 footer {
