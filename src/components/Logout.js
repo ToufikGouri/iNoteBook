@@ -57,7 +57,7 @@ const Logout = () => {
                 {/* ***************************Hero Animation****************************** */}
 
                 <div className='lo-animationContainer m-5'>
-                    <h1 className="lo-headings">What Is Your Today's
+                    <h1 className="lo-headings">What Is Your Today's&nbsp;
                         <animated.div style={{ ...animSpring }} id='lo-animatingText'>{currentText + " ?"}</animated.div>
                     </h1>
                 </div>

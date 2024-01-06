@@ -1,3 +1,18 @@
+nav {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+nav img {
+    height: 40px;
+    width: 40px;
+}
+
+nav>div {
+    font-size: 20px;
+}
+
 .addNote {
     display: flex;
     flex-direction: column;
@@ -60,7 +75,6 @@
 
 #lo-animatingText {
     display: inline-block;
-    margin: 0 15px;
     color: #00ae00;
 }
 
