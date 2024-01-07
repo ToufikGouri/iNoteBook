@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link, useNavigate } from "react-router-dom";
+import React, { useEffect } from 'react'
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Favicon from '../iNoteBook Logo.png'
 
 const Navbar = () => {
@@ -8,6 +8,15 @@ const Navbar = () => {
         localStorage.removeItem('token')
         navigate('/logout')
     }
+
+    // To change the title for each page 
+    const location = useLocation()
+    useEffect(() => {
+        location.pathname === "/" && (document.title = "iNoteBook - Your notebook on the cloud")
+        location.pathname === "/login" && (document.title = "Login - iNoteBook")
+        location.pathname === "/logout" && (document.title = "iNoteBook - Your notebook on the cloud")
+        location.pathname === "/signup" && (document.title = "Sign Up - iNoteBook")
+    }, [location.pathname])
 
     return (
         <nav>
