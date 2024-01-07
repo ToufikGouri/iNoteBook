@@ -32,4 +32,16 @@
     color: #858585 !important;
 }
 
-/* Sign Up css */
+::placeholder {
+    color: white !important;
+    opacity: 0.5 !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #25262B inset !important;
+    -webkit-text-fill-color: white !important;
+    caret-color: white !important;
+}

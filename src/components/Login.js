@@ -42,7 +42,7 @@ const Login = (props) => {
                     </div>
                     <div className="mb-4 mx-5 position-relative">
                         <label htmlFor="password" className="form-label">Password</label>
-                        <input type={showpass ? "text" : "password"} className="form-control " value={credentials.password} onChange={onChange} id="password" name='password' />
+                        <input type={showpass ? "text" : "password"} className="form-control " value={credentials.password} onChange={onChange} id="password" name='password' placeholder='Type your password' />
                         <i onClick={() => setShowpass(!showpass)} className={`fa-regular fa-eye${showpass ? "" : "-slash"} eyeLogo loginLink mb-1`}></i>
                         <Link className='text-light position-absolute text-decoration-none end-0 loginLink'>Forgot password?</Link>
                     </div>
@@ -56,7 +56,7 @@ const Login = (props) => {
                         <i className="fa-brands fa-facebook mx-2 text-dark bg-light p-1 rounded-circle loginLink"></i>
                         <i className="fa-brands fa-twitter mx-2 text-dark bg-light p-1 rounded-circle loginLink"></i>
                     </div>
-                    <p className='my-4'>Don't have an account? <Link to="/signup" className='text-light loginLink'>Sign Up</Link></p>
+                    <p className='my-4'>Don't have an account? <Link to="/signup" className='text-success text-decoration-none loginLink'>Sign Up</Link></p>
                 </div>
             </div>
         </>
