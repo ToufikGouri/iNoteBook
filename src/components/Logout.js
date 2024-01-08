@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { animated, useInView, useSpring } from 'react-spring';
 import Footer from './Footer'
 
@@ -46,7 +46,7 @@ const Logout = () => {
         <>
             <div className='lo-container mt-3'>
 
-                {/* ***************************Hero Sectionc****************************** */}
+                {/* ***************************Hero Section****************************** */}
 
                 <div className="lo-heroSection my-3">
                     <h1 className='lo-headings'>The Simplest Way To Keep Notes</h1>
@@ -56,13 +56,13 @@ const Logout = () => {
 
                 {/* ***************************Hero Animation****************************** */}
 
-                <div className='lo-animationContainer m-5'>
+                <div className='lo-animationContainer text-center m-5'>
                     <h1 className="lo-headings">What Is Your Today's&nbsp;
-                        <animated.div style={{ ...animSpring }} id='lo-animatingText'>{currentText + " ?"}</animated.div>
+                        <animated.div style={{ ...animSpring }} id='lo-animatingText'>{currentText + "?"}</animated.div>
                     </h1>
                 </div>
 
-                {/* ***************************Hero Sectionc mid****************************** */}
+                {/* ***************************Hero Section mid****************************** */}
 
                 <div className="lo-mid border-bottom pb-3">
 
@@ -77,7 +77,7 @@ const Logout = () => {
                         </div>
                     </div>
 
-                    <div className="row lo-imgParent">
+                    <div className="row lo-imgParent lo-imgParent2">
                         <div className="col-md-6 lo-imgContent d-flex align-items-center">
                             <h2 className="text-center">Acces Anytime, Anywhere And Across All The Devices With One Account.</h2>
                         </div>
@@ -101,7 +101,7 @@ const Logout = () => {
 
                 </div>
 
-                {/* ***************************Hero Sectionc End****************************** */}
+                {/* ***************************Hero Section End****************************** */}
 
                 <div className="lo-end my-5">
                     <h1 className="lo-headings text-center mb-4">What people are saying</h1>
@@ -116,7 +116,7 @@ const Logout = () => {
                         <h1 className="lo-headings text-center">Join The Family Of <animated.div ref={ref} className="lo-animatingCounter">{isVisible && count.to((val) => `${Math.floor(val)}+`)}</animated.div>Users On iNoteBook</h1>
                     </div>
 
-                    <div className="lo-downloads border-top py-5">
+                    <div className="lo-downloads border-top py-3">
                         <h1 className="lo-headings text-center">Available On All Your Devices</h1>
                         <div className="lo-downloadsContent text-center">
                             <p>Download iNoteBook For Any Device And Stay In Sync - All The Time,<br /> Everywhere.</p>

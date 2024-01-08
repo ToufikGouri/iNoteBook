@@ -51,6 +51,7 @@ input:-webkit-autofill:active {
 
 @media (max-width: 768px) {
     .authContainer {
+        /* width: 95%; */
         width: 100%;
     }
 
@@ -67,7 +68,7 @@ input:-webkit-autofill:active {
     }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991.98px) {
     .authContainer {
         width: 60%;
     }
