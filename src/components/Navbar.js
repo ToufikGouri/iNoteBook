@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import Favicon from '../iNoteBook Logo.png'
+import Favicon from '../iNoteBook Logo.png' 
 
 const Navbar = () => {
     let navigate = useNavigate();
@@ -21,6 +21,7 @@ const Navbar = () => {
     return (
         <nav>
             <div>
+                {/* <Link className="navbar-brand" to="/"><img src={Logo} alt="" /></Link> */}
                 <Link className="navbar-brand" to="/"><img src={Favicon} alt="" /> iNoteBook</Link>
             </div>
             {!localStorage.getItem('token') ? <form className="d-flex">

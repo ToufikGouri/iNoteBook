@@ -23,11 +23,13 @@ const Home = (props) => {
 
   return (
     <>
-      <div>
-        <h2>Welcome to iNoteBook</h2>
+      <div className='container my-3 d-flex flex-column align-items-center'>
+        <div>
+          <h1 className='border-bottom'>Welcome to iNoteBook</h1>
+        </div>
+        <Notes showAlert={showAlert} />
+        <Footer />
       </div>
-      <Notes showAlert={showAlert} />
-      <Footer />
     </>
   )
 }

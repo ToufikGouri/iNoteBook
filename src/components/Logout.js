@@ -122,15 +122,15 @@ const Logout = () => {
                             <p>Download iNoteBook For Any Device And Stay In Sync - All The Time,<br /> Everywhere.</p>
                             <div>
                                 <div>
-                                    <button className="btn btn-outline-light text- m-3"><div className='d-flex align-items-center text-start'><i className="fa-brands fa-apple fa-2xl me-4"></i><div> Downloads On The <div className='fs-5 fw-bold'>App Store</div></div></div></button>
-                                    <button className="btn btn-outline-light text-light m-3"><div className='d-flex align-items-center text-start'><i className="fa-brands fa-apple fa-2xl me-4"></i><div> Downloads On The <div className='fs-5 fw-bold'>Mac App Store</div></div></div></button>
+                                    <button className="btn btn-outline-light m-3"><div className='d-flex align-items-center text-start'><i className="fa-brands fa-apple fa-2xl me-4"></i><div> Downloads On The <div className='fs-5 fw-bold'>App Store</div></div></div></button>
+                                    <button className="btn btn-outline-light m-3"><div className='d-flex align-items-center text-start'><i className="fa-brands fa-apple fa-2xl me-4"></i><div> Downloads On The <div className='fs-5 fw-bold'>Mac App Store</div></div></div></button>
                                 </div>
                                 <div>
-                                    <button className="btn btn-outline-light text-light m-3"><div className='d-flex align-items-center text-start'><i className="fa-brands fa-google-play fa-2xl me-3"></i><div> Downloads On The <div className='fs-5 fw-bold'>Play Store</div></div></div></button>
-                                    <button className="btn btn-outline-light text-light m-3"><div className='d-flex align-items-center text-start'><i className="fa-brands fa-windows fa-2xl me-3"></i><div> Downloads On The <div className='fs-5 fw-bold'>Windows Store</div></div></div></button>
+                                    <button className="btn btn-outline-light m-3"><div className='d-flex align-items-center text-start'><i className="fa-brands fa-google-play fa-2xl me-3"></i><div> Downloads On The <div className='fs-5 fw-bold'>Play Store</div></div></div></button>
+                                    <button className="btn btn-outline-light m-3"><div className='d-flex align-items-center text-start'><i className="fa-brands fa-windows fa-2xl me-3"></i><div> Downloads On The <div className='fs-5 fw-bold'>Windows Store</div></div></div></button>
                                 </div>
                                 <div>
-                                    <button className="btn btn-outline-light text-light m-3"><div className='d-flex align-items-center text-start'><i className="fa-brands fa-linux fa-2xl me-4"></i><div> Downloads For <div className='fs-5 fw-bold'>Linux</div></div></div></button>
+                                    <button className="btn btn-outline-light m-3"><div className='d-flex align-items-center text-start'><i className="fa-brands fa-linux fa-2xl me-4"></i><div> Downloads For <div className='fs-5 fw-bold'>Linux</div></div></div></button>
                                 </div>
                             </div>
                         </div>
