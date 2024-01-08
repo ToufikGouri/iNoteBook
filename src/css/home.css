@@ -6,8 +6,18 @@ nav {
 
 nav img {
     height: 40px;
-    width: 40px;
+    width: auto;
+    /* position: absolute; */
 }
+
+/* .navbar-brand::before {
+    content: '';
+    background: url("../iNoteBook Logo & Name.jpg") no-repeat top / contain;
+    height: 80px;
+    width: 150px;
+    position: absolute;
+    margin-top: -20px;
+} */
 
 nav>div {
     font-size: 20px;
@@ -20,8 +30,14 @@ nav>div {
     align-items: center;
 }
 
-.addNote form {
-    width: 50%;
+.addNote input {
+    background: transparent !important;
+    color: white !important;
+    border-radius: 0;
+    border: none;
+    box-shadow: none !important;
+    border-bottom: 1px solid rgb(115, 115, 115);
+    width: 350px;
 }
 
 /* Log Out page CSS (lo) */
@@ -125,4 +141,18 @@ footer ul li a {
 
 footer ul li :hover {
     color: #3a3c3e;
+}
+
+.addNote ::placeholder {
+    color: white !important;
+    opacity: 0.5 !important;
+}
+
+.addNote input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #25262B inset !important;
+    -webkit-text-fill-color: white !important;
+    caret-color: white !important;
 }

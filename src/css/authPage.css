@@ -45,3 +45,30 @@ input:-webkit-autofill:active {
     -webkit-text-fill-color: white !important;
     caret-color: white !important;
 }
+
+
+/* Responsiveness */
+
+@media (max-width: 768px) {
+    .authContainer {
+        width: 100%;
+    }
+
+    .authContainer input {
+        width: 280px;
+    }
+
+    .authContainer button {
+        width: 280px;
+    }
+
+    .authContainer .loginLink:hover {
+        color: inherit !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .authContainer {
+        width: 60%;
+    }
+}

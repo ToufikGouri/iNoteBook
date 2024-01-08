@@ -1,10 +1,52 @@
-.notes-container {
-    /* border: 2px solid red; */
+.card:hover {
+    box-shadow: 0 0 7px white;
 }
 
 .fa-trash-can:hover {
     color: red;
 }
+
 .fa-pen-to-square:hover {
     color: green;
 }
+
+.modal {
+    backdrop-filter: blur(3px);
+}
+
+.modal-content {
+    background: #25262B;
+}
+
+.modal-header,
+.modal-footer {
+    border: none;
+}
+
+.modal-header button {
+    filter: invert(1);
+}
+
+.modal input {
+    background: transparent !important;
+    color: white !important;
+    border-radius: 0;
+    border: none;
+    box-shadow: none !important;
+    border-bottom: 1px solid rgb(115, 115, 115);
+    width: 350px;
+}
+
+/* .modald::placeholder {
+    color: white !important;
+    opacity: 0.5 !important;
+} */
+
+/* .modal input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #25262B inset !important;
+    -webkit-text-fill-color: white !important;
+    caret-color: white !important;
+} */
