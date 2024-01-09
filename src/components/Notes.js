@@ -78,8 +78,8 @@ const Notes = (props) => {
             </div>
             <h2 className='text-center'><span className='border-bottom'>Your Notes</span></h2>
             <div className="row my-3 text-white notes-container">
-                <div className="container mx-1">
-                    {notes.length === 0 && "No notes to display"}
+                <div className="container text-center my-3">
+                    {notes.length === 0 && <div> <h1>No notes to display <br /></h1><h4 className='my-3'>Start adding notes</h4></div>}
                 </div>
                 {notes.map((note) => {
                     return <NoteItem note={note} updateNote={updateNote} key={note._id} showAlert={props.showAlert} />
