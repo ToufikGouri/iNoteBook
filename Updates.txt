@@ -1,0 +1,2 @@
+1.Add modal before delete. (✅)
+2.On hover, Instead of changin icon color itself, chaneg the background color with border 50%. (✅)
